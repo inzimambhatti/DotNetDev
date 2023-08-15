@@ -1,0 +1,177 @@
+{
+    "Routes": [
+        {
+            "DownstreamPathTemplate": "/User/authenticate",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [{
+                "Host": "localhost",
+                "Port": "8096"
+            }],
+            "UpstreamPathTemplate": "/auth-api/auth"
+        },
+        {
+            "DownstreamPathTemplate": "/User/googleAuthenticate",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [{
+                "Host": "localhost",
+                "Port": "8096"
+            }],
+            "UpstreamPathTemplate": "/auth-api/gooeleAuth"
+        },
+        {
+            "DownstreamPathTemplate": "/User/saveGoogleSignIn",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [{
+                "Host": "localhost",
+                "Port": "8096"
+            }],
+            "UpstreamPathTemplate": "/auth-api/saveGoogleAuth"
+        },
+        {
+            "DownstreamPathTemplate": "/User/getTestData",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [{
+                "Host": "localhost",
+                "Port": "8096"
+            }],
+            "UpstreamPathTemplate": "/user-api/test"
+        },
+        {
+            "DownstreamPathTemplate": "/User/getAppStatus",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [{
+                "Host": "localhost",
+                "Port": "8096"
+            }],
+            "UpstreamPathTemplate": "/user-api/getAppStatus"
+        },
+        {
+            "DownstreamPathTemplate": "/User/getCompanyLogo",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [{
+                "Host": "localhost",
+                "Port": "8096"
+            }],
+            "UpstreamPathTemplate": "/auth-api/logo"
+        },
+        {
+            "DownstreamPathTemplate": "/User/saveUser",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [{
+                "Host": "localhost",
+                "Port": "8096"
+            }],
+            "UpstreamPathTemplate": "/auth-api/saveUser"
+        },
+        {
+            "DownstreamPathTemplate": "/User/saveOTP",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [{
+                "Host": "localhost",
+                "Port": "8096"
+            }],
+            "UpstreamPathTemplate": "/auth-api/genOTP"
+        },
+        {
+            "DownstreamPathTemplate": "/userDevice/saveUserDevice",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [{
+                "Host": "localhost",
+                "Port": "8096"
+            }],
+            "UpstreamPathTemplate": "/user-api/saveUserDevice"
+        },
+        {
+            "DownstreamPathTemplate": "/User/getOTP",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [{
+                "Host": "localhost",
+                "Port": "8096"
+            }],
+            "UpstreamPathTemplate": "/auth-api/saveOTP"
+        },
+        {
+            "DownstreamPathTemplate": "/User/sendMailFromSite",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [{
+                "Host": "localhost",
+                "Port": "8096"
+            }],
+            "UpstreamPathTemplate": "/auth-api/sendEmail"
+        },
+        {
+            "DownstreamPathTemplate": "/User/getVerifyOTP",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [{
+                "Host": "localhost",
+                "Port": "8096"
+            }],
+            "UpstreamPathTemplate": "/auth-api/getOTP"
+        },
+        {
+            "DownstreamPathTemplate": "/User/Login",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [{
+                "Host": "localhost",
+                "Port": "8096"
+            }],
+            "UpstreamPathTemplate": "/auth-api/Login"
+        },
+        {
+            "DownstreamPathTemplate": "/User/forgetPassword",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [{
+                "Host": "localhost",
+                "Port": "8096"
+            }],
+            "UpstreamPathTemplate": "/auth-api/forgetPassword"
+        },
+        {
+            "DownstreamPathTemplate": "/User/genToken",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [{
+                "Host": "localhost",
+                "Port": "8096"
+            }],
+            "UpstreamPathTemplate": "/auth-api/generateToken"
+        },
+        {
+            "DownstreamPathTemplate": "/User/{catchAll}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [{
+                "Host": "localhost",
+                "Port": "8096"
+            }],
+            "UpstreamPathTemplate": "/auth-api/{catchAll}"
+        },
+        {
+            "DownstreamPathTemplate": "/{catchAll}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [{
+                "Host": "localhost",
+                "Port": "8096"
+            }],
+            "UpstreamPathTemplate": "/user-api/{catchAll}",
+            "AuthenticationOptions":  {
+                "AuthenticationProviderKey": "MyOwnKey",
+                "AllowedScopes": []
+            }
+        },
+        {
+            "DownstreamPathTemplate": "/{catchAll}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [{
+                "Host": "localhost",
+                "Port": "8097"
+            }],
+            "UpstreamPathTemplate": "/core-api/{catchAll}",
+            "AuthenticationOptions":  {
+                "AuthenticationProviderKey": "MyOwnKey",
+                "AllowedScopes": []
+            }
+        }
+    ],
+    "GlobalConfiguration": {
+        "BaseUrl": "https://localhost:8095/"
+    }
+}
